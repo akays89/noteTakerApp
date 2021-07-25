@@ -15,7 +15,7 @@ An application using and express backend and will save and retrieve data from a 
 ## Usage
 To store notes and reminders
 ## Demo
-<img src= "/Users/amanda/Code/homework9/images/Screen Shot 2021-07-25 at 2.57.38 AM.png">
+
 ## Deployment
 https://immense-journey-73832.herokuapp.com/notes
 ## License
