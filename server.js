@@ -45,3 +45,25 @@ app.post('/api/notes', function (req, res) {
 app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, "./public/index.html"));
 });
+function savedNotes() {
+
+    const savedNotes = JSON.parse(fs.readFileSync(path.join(__dirname, './db/db.json'), 
+    'utf8'));
+
+    return savedNotes;
+}
+
+const updatedNotes = newNote => {
+    const notes = savedNotes();
+    console.log(notes, newNote);
+
+    notes.push({
+        ...newNote,
+        id: notes.length+1
+    });
+    if (notes) {
+        // console.log(notes);
+    }
+    fs.writeFileSync(path.join(__dirname, './db/db.json'), JSON.stringify(notes)) 
+        
+   }
